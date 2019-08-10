@@ -1,5 +1,7 @@
 <?php
 
+namespace app\controllers;
+
 class Posts
 {
     public function indexAction()
@@ -22,6 +24,6 @@ class Posts
 
     public function before()
     { 
-        
+
     }
 }
