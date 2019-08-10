@@ -23,7 +23,7 @@ class Router
     public static function getRoute()
     {
         return self::$route;
-    }
+    } 
  
     public static function matchRoute($url)
     {
