@@ -2,16 +2,26 @@
 
 class Posts
 {
-    public function index()
+    public function indexAction()
     {
-        
-        echo "new_post";
-       
-    }
-    public function new () {
 
-        echo "hello";
-
+        echo "Method::index";
     }
 
+    public function testAction()
+    {
+
+        echo "Method::test";
+    }
+
+    public function testPageAction()
+    {
+
+        echo "Method::testPage";
+    }
+
+    public function before()
+    {
+          
+    }
 }
