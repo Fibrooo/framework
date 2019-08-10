@@ -21,7 +21,7 @@ class Posts
     }
 
     public function before()
-    {
-          
+    { 
+        
     }
 }
