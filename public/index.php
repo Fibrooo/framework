@@ -15,4 +15,5 @@ debug(Router::getRoutes());
 
 Router::dispatch($query); 
 
-echo "hello, world!";
+echo "hello, world!2";
+ 
