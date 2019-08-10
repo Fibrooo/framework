@@ -31,3 +31,5 @@ Router::add('^(?P<controller>[a-z-]+)/?(?P<action>[a-z-]+)?$');
 debug(Router::getRoutes());
 
 Router::dispatch($query);
+
+echo "test";
