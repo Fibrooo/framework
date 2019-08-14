@@ -16,7 +16,6 @@
             <div class="col-md-3">
                 <h1>I,m bootsrap - default layout</h1>
                 <div class="first_class">
-                    
                     <?php echo $content; ?>
                 </div>
             </div>
