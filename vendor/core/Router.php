@@ -4,12 +4,24 @@ namespace vendor\core;
 
 class Router
 {
-    //Массив маршрутов (Таблица маршрутов)
+    /**
+     * Таблица всех маршрутов
+     *
+     * @var array
+     */
+
     protected  static $routes = [];
 
 
     protected  static $route = [];
 
+    /**
+     * Функция добавления маршрутов
+     *
+     * @param [type] $regexp
+     * @param array $route
+     * @return void
+     */
 
     public static function add($regexp, $route = [])
     {
@@ -51,8 +63,7 @@ class Router
     public static function dispatch($url)
     {
         $url = self::removeQueryString($url);
-        var_dump($url);
-        
+
         if (self::matchRoute($url)) {
 
             $controller = 'app\controllers\\' . self::$route['controller'];
@@ -62,6 +73,7 @@ class Router
                 $action = self::lowerCamelCase(self::$route['action']) . 'Action';
                 if (method_exists($cObj, $action)) {
                     $cObj->$action();
+                    $cObj->getView();
                 } else {
                     echo "<br>Метод " . $action . " не найден";
                 }
